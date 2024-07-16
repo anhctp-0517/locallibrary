@@ -8,7 +8,19 @@ import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
 
 import * as dotenv from "dotenv";
+import "reflect-metadata";
+import { AppDataSource } from "./config/data-source";
+
 dotenv.config();
+
+// establish database connection
+AppDataSource.initialize()
+  .then(() => {
+    console.log("Connected to db!");
+  })
+  .catch((err: Error | unknown) => {
+    console.error("Error:", err);
+  });
 
 // create and setup express app
 const app = express();
