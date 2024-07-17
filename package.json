@@ -9,7 +9,10 @@
     "dev": "nodemon",
     "test": "nodemon --config ./spec/nodemon.json",
     "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec",
-    "dev:start": "nodemon --exec ts-node src/bin/www.ts"
+    "dev:start": "nodemon --exec ts-node src/bin/www.ts",
+    "typeorm": "ts-node --require tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm -- migration:generate ./src/migration/initSetup -d ./src/config/data-source.ts",
+    "migration:run": "npm run typeorm -- migration:run -d ./src/config/data-source.ts"
   },
   "nodemonConfig": {
     "watch": [
@@ -41,6 +44,7 @@
     "module-alias": "^2.2.3",
     "moment": "^2.30.1",
     "morgan": "^1.10.0",
+    "reflect-metadata": "^0.2.2",
     "ts-command-line-args": "^2.5.1"
   },
   "devDependencies": {
@@ -61,11 +65,13 @@
     "find": "^0.3.0",
     "fs-extra": "^11.2.0",
     "jasmine": "^5.1.0",
+    "mysql2": "^3.10.2",
     "nodemon": "^3.1.4",
     "pug": "^3.0.3",
     "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "typeorm": "^0.3.20",
     "typescript": "^5.5.3"
   }
 }
