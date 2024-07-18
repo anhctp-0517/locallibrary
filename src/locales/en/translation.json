@@ -1,0 +1,25 @@
+{
+    "home": {
+        "welcome": "Welcome to {{title}}",
+        "content": "Library Content",
+        "record_infor": "The library has the following record counts:",
+        "book": "Books:",
+        "bookinstance": "Book instances:",
+        "available_bookinstance": "Available book instances:",
+        "author": "Authors:",
+        "genre": "Genres:"
+    },
+    "sidebar": {
+        "home": "Local Library",
+        "book": "Books",
+        "author": "Authors",
+        "genre": "Genres",
+        "bookinstance": "Book Instances",
+        "create_author": "Create Author",
+        "create_genre": "Create Genre",
+        "create_book": "Create Book",
+        "create_bookinstance": "Create Book Instance",
+        "en": "English",
+        "vi": "Vietnamese"
+    }
+}
