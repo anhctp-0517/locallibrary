@@ -9,6 +9,9 @@ import indexRouter from "./routes/index";
 import * as dotenv from "dotenv";
 import "reflect-metadata";
 import { AppDataSource } from "./config/data-source";
+import i18next from "i18next";
+import Backend from "i18next-fs-backend";
+import middleware from "i18next-http-middleware";
 
 dotenv.config();
 
@@ -20,9 +23,43 @@ AppDataSource.initialize()
   .catch((err: Error | unknown) => {
     console.error("Error:", err);
   });
+i18next
+  .use(Backend)
+  .use(middleware.LanguageDetector)
+  .init({
+    fallbackLng: "en",
+    supportedLngs: ["en", "vi"],
+    preload: ["en", "vi"],
+    saveMissing: true,
+    backend: {
+      loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
+      addPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.missing.json"),
+    },
+    detection: {
+      order: ["querystring", "cookie"],
+      caches: ["cookie"],
+      lookupQuerystring: "lng",
+      lookupCookie: "lng",
+      ignoreCase: true,
+      cookieSecure: false,
+    },
+  });
 
 // create and setup express app
 const app = express();
+
+// i18next middleware
+app.use(
+  middleware.handle(i18next, {
+    ignoreRoutes: [],
+    removeLngFromUrl: false,
+  })
+);
+
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.locals.t = req.t;
+  next();
+});
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

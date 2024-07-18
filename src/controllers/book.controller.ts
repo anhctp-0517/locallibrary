@@ -1,6 +1,29 @@
 import { Request, Response, NextFunction } from "express";
 import asyncHandler from "express-async-handler";
 
+import * as services from "../services";
+
+export const index = asyncHandler(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const [books, bookInstances, availableBookInstances, authors, genres] =
+      await Promise.all([
+        services.getBookCount(),
+        services.getBookInstancesCount(),
+        services.getAvailableBookInstancesCount(),
+        services.getAuthorCount(),
+        services.getGenreCount(),
+      ]);
+
+    res.render("index", {
+      title: "Local Library",
+      book_count: books,
+      book_instance_count: bookInstances,
+      book_instance_available_count: availableBookInstances[1],
+      author_count: authors,
+      genre_count: genres,
+    });
+  }
+);
 export const getBook = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     res.send("NOT IMPLEMENTED: Book list");
