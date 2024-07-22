@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    h1 #{t('home.genre')} #{genre.name}
+    div #[strong #{t('home.book')} ] 
+    if genre_books.length !== 0
+        each genre_book, index in genre_books
+            a(href=`/books/${genre_book.id}`) #{genre_book.title}
+            div #{genre_book.summary}
+    else
+        div #{t('genre.emptyBookList')}

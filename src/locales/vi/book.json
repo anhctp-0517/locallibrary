@@ -1,6 +1,14 @@
 {
     "book": {
         "bookList": "Danh sách các quyển sách có trong thư viện",
-        "emptyBookList": "Không có quyển sách nào"
+        "emptyBookList": "Không có quyển sách nào",
+        "title": "Tiêu đề",
+        "author": "Tác giả",
+        "summary": "Tóm tắt",
+        "isbn": "ISBN",
+        "genres": "Thể loại",
+        "nogenre": "Không có thể loại cho sách này",
+        "copies": "Bản sao",
+        "ID": "Mã sách"
     }
 }

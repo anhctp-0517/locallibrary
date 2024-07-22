@@ -9,3 +9,9 @@ export const getAuthorList = async () =>
   await authorRepository.find({
     order: { family_name: "ASC" },
   });
+
+export const getAuthorById = async (id: number) =>
+  await authorRepository.findOne({
+    where: { id },
+    relations: ["books"],
+  });

@@ -12,6 +12,8 @@ import { AppDataSource } from "./config/data-source";
 import i18next from "i18next";
 import Backend from "i18next-fs-backend";
 import middleware from "i18next-http-middleware";
+import session from "express-session";
+import flash from "connect-flash";
 
 dotenv.config();
 
@@ -31,8 +33,26 @@ i18next
     supportedLngs: ["en", "vi"],
     preload: ["en", "vi"],
     saveMissing: true,
+    ns: [
+      "author",
+      "book",
+      "bookInstance",
+      "detail",
+      "error",
+      "genre",
+      "translation",
+    ],
+    defaultNS: [
+      "author",
+      "book",
+      "bookInstance",
+      "detail",
+      "error",
+      "genre",
+      "translation",
+    ],
     backend: {
-      loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
+      loadPath: path.join(__dirname, "./locales/{{lng}}/{{ns}}.json"),
       addPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.missing.json"),
     },
     detection: {
@@ -60,7 +80,20 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.locals.t = req.t;
   next();
 });
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: true,
+    secret: process.env.SESSION_SECRET || "secret",
+  })
+);
 
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.messages = req.flash();
+  next();
+});
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");

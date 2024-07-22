@@ -1,6 +1,7 @@
 {
     "author": {
         "authorList": "Author list",
-        "emptyAuthorList": "There are no authors"
+        "emptyAuthorList": "There are no authors",
+        "emptyBookList": "There are no books"
     }
 }

@@ -6,6 +6,6 @@ block content
         ul
             each genre in genres
                 li
-                    a(href=genre.url) #{genre.name}
+                    a(href=`/genres/${genre.id}`) #{genre.name}
     else
         p #{t('genre.emptyGenreList')}

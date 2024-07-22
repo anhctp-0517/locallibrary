@@ -1,6 +1,7 @@
 {
     "author": {
         "authorList": "Danh sách tác giả",
-        "emptyAuthorList": "Không có tác giả nào"
+        "emptyAuthorList": "Không có tác giả nào",
+        "emptyBookList": "Không có quyển sách nào"
     }
 }

@@ -7,7 +7,7 @@ block content
             each author in authors
                 li
                     p
-                        a(href=author.url) #{author.family_name}, #{author.first_name} 
+                        a(href=`/authors/${author.id}`) #{author.family_name}, #{author.first_name} 
                         p (#{author.date_of_birth ? new Date(author.date_of_birth) : ''} #{author.date_of_death ? '- ' + new Date(author.date_of_death) : ''})
     else
         p #{t('author.emptyAuthorList')}

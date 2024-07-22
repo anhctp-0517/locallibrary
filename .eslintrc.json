@@ -16,7 +16,7 @@
     "@typescript-eslint/explicit-member-accessibility": "warn",
     "@typescript-eslint/no-misused-promises": 0,
     "@typescript-eslint/no-floating-promises": 0,
-    "comma-dangle": ["warn", "always-multiline"],
+    "comma-dangle": [2, "always-multiline"],
     "no-console": 1,
     "no-extra-boolean-cast": 0,
     "semi": 1,

@@ -6,7 +6,7 @@ block content
         ul
             each book in books
                 li
-                    a(href=book.url) #{book.title}
+                    a(href=`/books/${book.id}`) #{book.title}
                     |  (#{book.author.first_name + ' '+ book.author.family_name})
     else
         p #{t('book.emptyBookList')}

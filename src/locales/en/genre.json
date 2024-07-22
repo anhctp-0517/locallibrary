@@ -1,6 +1,7 @@
 {
     "genre": {
         "genreList": "Genre list",
-        "emptyGenreList": "There are no genres"
+        "emptyGenreList": "There are no genres",
+        "emptyBookList": "There are no books"
     }
 }
