@@ -16,10 +16,22 @@ bookinstanceRouter.get(
   bookinstanceController.deleteBookInstanceGet
 );
 
+// POST request to delete BookInstance.
+bookinstanceRouter.post(
+  "/:id/delete",
+  bookinstanceController.deleteBookInstancePost
+);
+
 // GET request to update BookInstance.
 bookinstanceRouter.get(
   "/:id/update",
-  bookinstanceController.updateBookInstance
+  bookinstanceController.updateBookInstanceGet
+);
+
+// POST request to update BookInstance.
+bookinstanceRouter.post(
+  "/:id/update",
+  bookinstanceController.updateBookInstancePost
 );
 
 // GET request for one BookInstance.

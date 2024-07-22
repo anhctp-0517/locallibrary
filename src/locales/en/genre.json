@@ -2,6 +2,7 @@
     "genre": {
         "genreList": "Genre list",
         "emptyGenreList": "There are no genres",
-        "emptyBookList": "There are no books"
+        "emptyBookList": "There are no books",
+        "name_max": "Genre name must contain at least 3 characters"
     }
 }

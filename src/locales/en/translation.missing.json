@@ -1,0 +1,21 @@
+{
+  "sidebar": {
+    "update_book": "sidebar.update_book",
+    "delete_bookinstance": "sidebar.delete_bookinstance",
+    "update_bookinstance": "sidebar.update_bookinstance",
+    "update_genre": "sidebar.update_genre",
+    "delete_genre": "sidebar.delete_genre"
+  },
+  "select_author": "select_author",
+  "select_book": "select_book",
+  "date_available": "date_available",
+  "select_status": "select_status",
+  "submit": "submit",
+  "bookinstance": {
+    "invalid_due_back": "bookinstance.invalid_due_back"
+  },
+  "Delete": "Delete",
+  "genre": {
+    "deleteConfirm": "genre.deleteConfirm"
+  }
+}

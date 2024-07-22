@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    h1 #{t(title)}: #{book.title}
+    p= book.summary
+    p= book.isbn
+    if bookInstances.length
+        p #[strong #{t('book.deleteWarning')} ]
+        div.mt-5.ml-5
+            h4 #{t('home.bookInstance')}
+            dl
+                each bookinstance in bookInstances
+                    dt
+                        a(href=`/bookinstances/${bookinstance.id}`) #{bookinstance.imprint}
+                    dd #{bookinstance.dueBack ? new Date(bookinstance.dueBack) : ''}
+    else 
+        p #{t('book.deleteConfirm')}
+        form(method='POST')
+            div.form-group
+                input#bookid.form-control(type='hidden' name='bookid', value=book._id )
+                button.btn.btn-primary(type='submit') #{t('form.delete')}

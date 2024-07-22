@@ -41,7 +41,7 @@ export class Book {
   @OneToMany(() => BookInstance, (bookInstance) => bookInstance.book)
   bookInstances: BookInstance[];
 
-  constructor(book: Partial<Book>) {
+  constructor(book?: Partial<Book>) {
     if (book) {
       this.title = book.title!;
       this.summary = book.summary!;

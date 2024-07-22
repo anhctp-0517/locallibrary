@@ -10,8 +10,14 @@ authorRouter.post("/create", authorController.authorCreatePost);
 // GET request to delete Author.
 authorRouter.get("/:id/delete", authorController.authorDeleteGet);
 
+// POST request to delete Author.
+authorRouter.post("/:id/delete", authorController.authorDeletePost);
+
 // GET request to update Author.
-authorRouter.get("/:id/update", authorController.authorUpdate);
+authorRouter.get("/:id/update", authorController.authorUpdateGet);
+
+// POST request to update Author.
+authorRouter.post("/:id/update", authorController.authorUpdatePost);
 
 // GET request for one Author.
 authorRouter.get("/:id", authorController.authorDetail);

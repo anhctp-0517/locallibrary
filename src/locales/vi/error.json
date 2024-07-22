@@ -8,5 +8,15 @@
         "book_not_found": "Không tìm thấy sách",
         "invalid_bookinstance_id": "Mã bản sao sách không hợp lệ",
         "bookinstance_not_found": "Không tìm thấy bản sao sách"
+    },
+    "form": {
+        "submit": "Gửi",
+        "delete": "Xóa",
+        "select_author": "Chọn tác giả",
+        "select_book": "Chọn sách",
+        "select_status": "Chọn tình trạng",
+        "date_available": "Ngày có sách",
+        "invalid_delete": "Hãy xóa {{ condition }} sau đây trước khi xóa {{ entity }} này.",
+        "warning_delete": "Cảnh báo: Bạn có thực sự muốn xóa {{ entity }} này?"
     }
 }

@@ -25,7 +25,7 @@ export class BookInstance {
   @JoinColumn({ name: "book_id" })
   book: Book;
 
-  constructor(bookInstance: Partial<BookInstance>) {
+  constructor(bookInstance?: Partial<BookInstance>) {
     if (bookInstance) {
       this.imprint = bookInstance.imprint!;
       this.status = bookInstance.status!;

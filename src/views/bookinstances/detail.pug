@@ -14,3 +14,8 @@ block content
     else
         div #[strong #{t('bookInstance.status.name')} ]: #{t('bookInstance.status')}
     div #[strong #{t('bookInstance.dueBack')} ]: #{bookInstance.dueBack ? new Date(bookInstance.dueBack) : ''}
+    hr
+    div
+        a(href=`/bookinstances/${bookInstance.id}/delete`) #{t('form.delete')}
+    div
+        a(href=`/bookinstances/${bookInstance.id}/update`) #{t('form.update')}

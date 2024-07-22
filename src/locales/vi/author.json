@@ -2,6 +2,16 @@
     "author": {
         "authorList": "Danh sách tác giả",
         "emptyAuthorList": "Không có tác giả nào",
-        "emptyBookList": "Không có quyển sách nào"
+        "emptyBookList": "Không có quyển sách nào",
+        "first_name": "Tên",
+        "family_name": "Họ và tên đệm",
+        "date_of_birth": "Ngày sinh",
+        "date_of_death": "Ngày mất",
+        "empty_first_name": "Tên phải được chỉ định",
+        "invalid_first_name": "Tên chứa kí tự không hợp lệ",
+        "empty_family_name": "Họ và tên đệm phải được chỉ định",
+        "invalid_family_name": "Họ và tên đệm chứa kí tự không hợp lệ",
+        "invalid_date_of_birth": "Ngày sinh không hợp lệ",
+        "invalid_date_of_death": "Ngày mất không hợp lệ"
     }
 }
