@@ -5,9 +5,10 @@
         "imprint": "Nhà xuất bản",
         "dueBack": "Hạn cuối",
         "status": {
+            "name": "Trạng thái",
             "available": "Có sẵn",
             "loaned": "Đang cho mượn",
-            "maintenance": "Bảo trì"
+            "unavailable": "Không có sẵn"
         }
     }
 }

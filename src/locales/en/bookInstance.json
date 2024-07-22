@@ -5,9 +5,10 @@
         "imprint": "Imprint",
         "dueBack": "Due back",
         "status": {
+            "name": "Status",
             "available": "Available",
             "loaned": "Loaned",
-            "maintenance": "Maintenance"
+            "unavailable": "Unavailable"
         }
     }
 }

@@ -1,6 +1,7 @@
 {
     "genre": {
         "genreList": "Danh sách thể loại",
-        "emptyGenreList": "Không có thể loại nào"
+        "emptyGenreList": "Không có thể loại nào",
+        "emptyBookList": "Không có quyển sách nào nào"
     }
 }

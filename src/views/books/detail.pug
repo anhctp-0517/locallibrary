@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+    h1 #{t('book.title')}: #{book.title}
+
+    div
+        strong #{t('book.author')}: 
+        a(href=`/authors/${book.author.id}`) #{book.author.first_name}, #{book.author.family_name}
+    div
+        strong #{t('book.summary')}: 
+        | #{book.summary}
+    div
+        strong #{t('book.isbn')}: 
+        | #{book.isbn}
+    div
+        strong #{t('book.genres')}: 
+        if bookGenres.length > 0
+            each val, index in bookGenres
+                a(href=`/genres/${val.id}`) #{val.name}
+                if index < bookGenres.length - 1
+                    | , 
+        else
+            | #{t('book.nogenre')}
+
+    div(class = 'mt-5 ml-5')
+        h4 #{t('book.copies')}
+        if bookInstances.length > 0
+            each val in bookInstances
+                hr
+                if val.status == 'Available'
+                    div.text-success #{val.status}
+                else if val.status == 'Maintenance'
+                    div.text-danger #{val.status}
+                else
+                    div.text-warning #{val.status}
+                div
+                    strong #{t('bookInstance.imprint')}: 
+                    | #{val.imprint}
+                if val.status != 'Available'
+                    div
+                        strong #{t('bookInstance.dueBack')}: 
+                        | #{val.dueBack}
+                div
+                    strong #{t('book.ID')}: 
+                    a(href=`/bookinstances/${val.id}`) #{val.id}
+        else
+            div #{t('bookInstance.noBookInstance')}

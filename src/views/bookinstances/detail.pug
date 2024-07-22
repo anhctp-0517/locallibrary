@@ -1,0 +1,16 @@
+extends ../layout
+
+block content 
+    h1 ID: #{bookInstance.id}
+    div #[strong #{t('book.title')} ] 
+        a(href=`/books/${bookInstance.book.id}`) #{bookInstance.book.title}
+    div #[strong #{t('bookInstance.imprint')} ]: #{bookInstance.imprint}
+    if bookInstance.status === BOOK_INSTANCE_STATUS.AVAILABLE
+        div #[strong #{t('bookInstance.status.name')} ]: #[span.text-green #{t('bookInstance.status.available')}]
+    else if bookInstance.status === BOOK_INSTANCE_STATUS.UNAVAILABLE
+        div #[strong #{t('bookInstance.status.name')} ]: #[span.text-red #{t('bookInstance.status.unavailable')}]
+    else if bookInstance.status === BOOK_INSTANCE_STATUS.LOANED
+        div #[strong #{t('bookInstance.status.name')} ]: #[span.text-orange #{t('bookInstance.status.loaned')}]
+    else
+        div #[strong #{t('bookInstance.status.name')} ]: #{t('bookInstance.status')}
+    div #[strong #{t('bookInstance.dueBack')} ]: #{bookInstance.dueBack ? new Date(bookInstance.dueBack) : ''}

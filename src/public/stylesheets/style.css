@@ -19,3 +19,9 @@ p {
   display: inline;
   margin: 0;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}

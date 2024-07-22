@@ -1,6 +1,14 @@
 {
     "book": {
         "bookList": "List of books available in the library",
-        "emptyBookList": "There are no books"
+        "emptyBookList": "There are no books",
+        "title": "Title",
+        "author": "Author",
+        "summary": "Summary",
+        "isbn": "ISBN",
+        "genres": "Genres",
+        "nogenre": "No genre for this book",
+        "copies": "Copies",
+        "ID": "Id"
     }
 }

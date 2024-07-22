@@ -1,0 +1,11 @@
+extends ../layout
+
+block content 
+    h1 #{t('home.author')} #{author.first_name} #{author.family_name}
+    div #[strong #{t('home.book')} ] 
+    if authorBooks.length !== 0
+        each authorBook, index in authorBooks
+            a(href=`/books/${authorBook.id}`) #{authorBook.title}
+            div #{authorBook.summary}
+    else
+        div #{t('author.emptyBookList')}

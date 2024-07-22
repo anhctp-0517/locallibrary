@@ -10,3 +10,9 @@ export const getBookList = async () =>
     order: { title: "ASC" },
     relations: ["author"],
   });
+
+export const getBookById = async (id: number) =>
+  await bookRepository.findOne({
+    relations: ["author", "genres", "bookInstances"],
+    where: { id },
+  });
