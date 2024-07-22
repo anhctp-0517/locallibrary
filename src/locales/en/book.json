@@ -1,0 +1,6 @@
+{
+    "book": {
+        "bookList": "List of books available in the library",
+        "emptyBookList": "There are no books"
+    }
+}

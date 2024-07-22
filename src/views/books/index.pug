@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h1= title
+    if books.length
+        ul
+            each book in books
+                li
+                    a(href=book.url) #{book.title}
+                    |  (#{book.author.first_name + ' '+ book.author.family_name})
+    else
+        p #{t('book.emptyBookList')}

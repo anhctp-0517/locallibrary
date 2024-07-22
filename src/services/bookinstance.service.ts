@@ -11,3 +11,8 @@ export const getAvailableBookInstancesCount = async () =>
   await bookInstanceRepository.findAndCount({
     where: { status: BOOK_INSTANCE_STATUS.AVAILABLE },
   });
+
+export const getBookinstanceList = async () =>
+  await bookInstanceRepository.find({
+    relations: ["book"],
+  });

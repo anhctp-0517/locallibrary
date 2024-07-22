@@ -1,0 +1,13 @@
+{
+    "bookInstance": {
+        "bookInstanceList": "Danh sách các bản sao sách có trong thư viện",
+        "emptyBookInstanceList": "Không có bản sao sách nào",
+        "imprint": "Nhà xuất bản",
+        "dueBack": "Hạn cuối",
+        "status": {
+            "available": "Có sẵn",
+            "loaned": "Đang cho mượn",
+            "maintenance": "Bảo trì"
+        }
+    }
+}

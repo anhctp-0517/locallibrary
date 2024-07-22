@@ -1,9 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 import asyncHandler from "express-async-handler";
+import * as genreServices from "../services/genre.service";
 
 export const getGenre = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
-    res.send("NOT IMPLEMENTED: Genre list");
+    const genres = await genreServices.getGenreList();
+    res.render("genres/index", { genres, title: req.t("genre.genreList") });
   }
 );
 export const getGenreDetail = asyncHandler(
