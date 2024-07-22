@@ -1,0 +1,13 @@
+{
+    "bookInstance": {
+        "bookInstanceList": "Book Instance List in the library",
+        "emptyBookInstanceList": "There are no book instances",
+        "imprint": "Imprint",
+        "dueBack": "Due back",
+        "status": {
+            "available": "Available",
+            "loaned": "Loaned",
+            "maintenance": "Maintenance"
+        }
+    }
+}

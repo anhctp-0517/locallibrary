@@ -3,3 +3,19 @@
   padding: 0;
   list-style: none;
 }
+li.separator {
+  height: 1px;
+  width: 100%;
+  background-color: grey;
+  margin: 20px 0;
+}
+
+li.spacer {
+  margin-top: 20px;
+}
+
+a,
+p {
+  display: inline;
+  margin: 0;
+}
