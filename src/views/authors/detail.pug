@@ -9,3 +9,7 @@ block content
             div #{authorBook.summary}
     else
         div #{t('author.emptyBookList')}
+    hr
+    p
+        a(href=`${author.id}/delete`) #{t('form.delete')}
+        a(href=`${author.id}/update`) #{t('form.update')}

@@ -8,5 +8,16 @@
         "book_not_found": "Book not found",
         "invalid_bookinstance_id": "Invalid bookinstance ID parameter",
         "bookinstance_not_found": "Bookinstance not found"
+    },
+    "form": {
+        "submit": "Submit",
+        "delete": "Delete",
+        "update": "Update",
+        "select_author": "Please select an author",
+        "select_book": "Please select a book",
+        "select_status": "Please select a status",
+        "date_available": "Date when book available",
+        "invalid_delete": "Delete the following {{ condition }} before attempting to delete this {{ entity }}.",
+        "warning_delete": "Warning: Do you really want to delete this {{ entity }}?"
     }
 }

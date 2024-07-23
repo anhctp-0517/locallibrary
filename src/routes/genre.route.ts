@@ -10,8 +10,14 @@ genreRouter.post("/create", genreController.createGenrePost);
 // GET request to delete Genre.
 genreRouter.get("/:id/delete", genreController.deleteGenreGet);
 
+// POST request to delete Genre.
+genreRouter.post("/:id/delete", genreController.deleteGenrePost);
+
 // GET request to update Genre.
-genreRouter.get("/:id/update", genreController.updateGenre);
+genreRouter.get("/:id/update", genreController.updateGenreGet);
+
+// POST request to update Genre.
+genreRouter.post("/:id/update", genreController.updateGenrePost);
 
 // GET request for one Genre.
 genreRouter.get("/:id", genreController.getGenreDetail);

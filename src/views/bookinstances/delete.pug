@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1 #{t(title)}: #{bookInstance.imprint}
+    p= bookInstance.status
+    p= bookInstance.dueBack
+    form(method='POST')
+        div.form-group
+            input#bookinstanceid.form-control(type='hidden' name='bookinstanceid', value=bookInstance.id )
+            button.btn.btn-primary(type='submit') #{t('form.delete')}
+    if errors
+        ul
+            for error in errors
+                li!= error.msg

@@ -9,6 +9,8 @@
             "available": "Available",
             "loaned": "Loaned",
             "unavailable": "Unavailable"
-        }
+        },
+        "field_specified": "{{field}} must be specified",
+        "invalid_due_back": "Invalid date of due back"
     }
 }

@@ -9,6 +9,8 @@
         "genres": "Thể loại",
         "nogenre": "Không có thể loại cho sách này",
         "copies": "Bản sao",
-        "ID": "Mã sách"
+        "ID": "Mã sách",
+        "choose_book": "Sách",
+        "field_empty": "{{field}} không được để trống"
     }
 }

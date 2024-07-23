@@ -2,6 +2,16 @@
     "author": {
         "authorList": "Author list",
         "emptyAuthorList": "There are no authors",
-        "emptyBookList": "There are no books"
+        "emptyBookList": "There are no books",
+        "first_name": "First Name",
+        "family_name": "Family Name",
+        "date_of_birth": "Date of Birth",
+        "date_of_death": "Date of Death",
+        "empty_first_name": "First name must be specified",
+        "invalid_first_name": "First name has invalid characters",
+        "empty_family_name": "Family name must be specified",
+        "invalid_family_name": "Family name has invalid characters",
+        "invalid_date_of_birth": "Invalid date of birth",
+        "invalid_date_of_death": "Invalid date of death"
     }
 }

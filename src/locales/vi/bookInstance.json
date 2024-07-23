@@ -9,6 +9,8 @@
             "available": "Có sẵn",
             "loaned": "Đang cho mượn",
             "unavailable": "Không có sẵn"
-        }
+        },
+        "field_specified": "{{field}} phải được chỉ định",
+        "invalid_due_back": "Ngày có sách không hợp lệ"
     }
 }

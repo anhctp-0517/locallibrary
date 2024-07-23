@@ -45,3 +45,8 @@ block content
                     a(href=`/bookinstances/${val.id}`) #{val.id}
         else
             div #{t('bookInstance.noBookInstance')}
+    hr
+    div
+        a(href=`/books/${book.id}/delete`) #{t('form.delete')}
+    div
+        a(href=`/books/${book.id}/update`) #{t('form.update')}  

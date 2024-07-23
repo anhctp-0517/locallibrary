@@ -9,6 +9,8 @@
         "genres": "Genres",
         "nogenre": "No genre for this book",
         "copies": "Copies",
-        "ID": "Id"
+        "ID": "Id",
+        "choose_book": "Book",
+        "field_empty": "{{field}} must not be empty"
     }
 }
